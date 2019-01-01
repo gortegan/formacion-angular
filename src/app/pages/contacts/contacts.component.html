@@ -1,0 +1,14 @@
+<div class="card-group">
+    <div class="card" style="width: 18rem;" *ngFor="let contact of contacts;let i = index">
+        <img *ngIf="i > 0" [hidden]="i === 1" [src]="'assets/images/' + contact.url" class="card-img-top" [alt]="contact.name">
+        <div class="card-body">
+            <h5 class="card-title">{{ contact.name | uppercase }}</h5>
+          <p class="card-text"> {{contact.adress}} </p>
+          <p class="card-text"><small class="text-muted"> {{contact.age}} years </small></p>
+        </div>
+        <button class="btn" [routerLink]="['/contacts', contact.id]">Ver detalle</button>
+      </div>
+</div>
+
+<button class="btn btn-primary" (click)="getHttpContacts()"> Server Data</button>
+<button class="btn btn-secondary" (click)="getFrontEndContacts()"> Front End Data</button>

@@ -1,0 +1,8 @@
+<h1>Form controls</h1>
+<form action="" [formGroup]="userGroup" (ngSubmit)="onSubmit()">
+  <label for="name">Nombre: </label> <input type="text" name="name" formControlName="name"><br>
+  <label for="sname">Apellido: </label> <input type="text" name="sname" formControlName="sname"> <br>
+  <button class="btn btn-danger" type="submit">
+          Submit
+  </button>
+</form>

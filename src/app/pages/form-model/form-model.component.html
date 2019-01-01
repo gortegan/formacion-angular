@@ -1,0 +1,8 @@
+<h1>Form model</h1>
+<form action="" (ngSubmit)="onSubmit()">
+  <label for="name">Nombre: </label> <input [(ngModel)]="user.name" type="text" name="name" > <br>
+  <label for="sname">Apellido: </label> <input [(ngModel)]="user.sname" type="text" name="sname"> <br>
+  <button class="btn btn-danger" type="submit">
+          Submit
+  </button>
+</form>
